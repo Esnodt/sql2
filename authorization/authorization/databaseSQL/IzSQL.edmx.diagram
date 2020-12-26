@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="efc5997085d84f4f9aac841d2c136954" Name="Diagram1">
+        <EntityTypeShape EntityType="OrganizationModel.CompletingOfTheWork" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="OrganizationModel.Employee" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OrganizationModel.Role" Width="1.5" PointX="8.125" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OrganizationModel.SignIn" Width="1.5" PointX="5" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="OrganizationModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OrganizationModel.Work" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <AssociationConnector Association="OrganizationModel.FK_Work_JobNomer_CompletingOfTheWork_NomerJob" ManuallyRouted="false" />
+        <AssociationConnector Association="OrganizationModel.FK_Work_Worker_Employee_PersonnelNomer" ManuallyRouted="false" />
+        <AssociationConnector Association="OrganizationModel.FK_SignIn_IDRole_Role_RoleID" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

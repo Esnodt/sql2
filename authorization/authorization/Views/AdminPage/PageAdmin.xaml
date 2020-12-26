@@ -1,0 +1,127 @@
+﻿<Page x:Class="authorization.Views.AdminPage.PageAdmin"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:authorization.Views.AdminPage"
+      mc:Ignorable="d" Loaded="Page_Loaded_1"
+      d:DesignHeight="500" d:DesignWidth="1300"
+      Title="PageAdmin">
+
+    <Grid >
+        <StackPanel>
+            <Image Source="/Image/FON.jpg"></Image>
+        </StackPanel>
+        <Frame x:Name="FrameEditPage" NavigationUIVisibility="Hidden"></Frame>
+        <Grid>
+
+
+
+
+
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <StackPanel Orientation="Horizontal">
+
+                <Button  Content="Назад" Width="100" Height="30" Margin="10" Background="White" BorderBrush="Red" x:Name="ButtonGoBack" Click="ButtonGoBack_Click" >
+                </Button>
+                
+
+                <Button Width="100" Height="30"
+                        BorderBrush="Black" Background="White" Margin="10" Content="Добавить" x:Name="ButtonAdd" Click="ButtonAdd_Click">
+                </Button>
+
+
+                <Button Width="130" Height="30" Margin="5 10 0 5" x:Name="ButtonEdit" BorderBrush="Black" Content="Редактировать" Background="White" Click="ButtonEdit_Click">
+                </Button>
+
+
+                <Button Width="100" Height="30" BorderBrush="Red" x:Name="ButtonDelete" Content="Удалить" Background="White" Margin="30 10 10 10" Click="ButtonDelete_Click">
+                </Button>
+
+                <StackPanel>
+                    <Button Width="150" Height="30" Background="White" BorderBrush="Red" Content="Удалить все строки" Margin="0 10 0 0" Click="Button_Click"></Button>
+                </StackPanel>
+
+
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                    <TextBlock Text="Поиск:" Width="70" FontSize="20" Margin="150 15 0 0"></TextBlock>
+                    <TextBox Width="200" Height="30" Margin="0,15,0,5" Background="AliceBlue" BorderBrush="Black" FontSize="15" x:Name="textboxSearch" TextChanged="textboxSearch_TextChanged"/>
+
+                 
+                    <StackPanel>
+                        <Image Source="/Image/poisk.jpg" Height="40" Margin="0 5 0 0">
+                        </Image>
+                    </StackPanel>
+                  
+                </StackPanel>
+                
+                
+            </StackPanel>
+
+            <DataGrid Grid.Row="1" x:Name="DataGridTablica" IsReadOnly="True" ColumnWidth="*" AutoGenerateColumns="False" SelectedCellsChanged="DataGridTablica_SelectedCellsChanged">
+
+                <DataGrid.Columns>
+
+
+                    <DataGridTextColumn
+                        Header="Номер работника" Binding="{Binding Employee.Position}" Width="137">
+                    </DataGridTextColumn>
+
+
+                    <DataGridTextColumn
+                        Header="ФИО Работника" Binding="{Binding Employee.FullName}" Width="126">
+                    </DataGridTextColumn>
+
+
+                    <DataGridTextColumn
+                        Header="Должность" Binding="{Binding Employee.Position}" Width="98">
+                    </DataGridTextColumn>
+
+
+
+
+
+
+                    <DataGridTextColumn
+                        Header="Номер работы" Binding="{Binding CompletingOfTheWork.NomerJob}" Width="140">
+                    </DataGridTextColumn>
+
+                    <DataGridTextColumn
+                        Header="Название работы" Binding="{Binding CompletingOfTheWork.NameWork}" Width="140">
+                    </DataGridTextColumn>
+                    
+
+                    <DataGridTextColumn
+                        Header="Трудоемкость" Binding="{Binding CompletingOfTheWork.Laboriousness}" Width="115">
+                    </DataGridTextColumn>
+
+                    <DataGridTextColumn
+                        Header="Дата завершения" Binding="{Binding CompletingOfTheWork.DataOfComplite,StringFormat={}{0:dd MMMM yyyy}}" Width="145">
+                    </DataGridTextColumn>
+                    
+
+                    <DataGridTextColumn
+                    Header="Планируемая дата завершения" Binding="{Binding CompletingOfTheWork.PlannedEndDate,StringFormat={}{0:dd MMMM yyyy}}" Width="220">
+                    </DataGridTextColumn>
+
+                    <DataGridTextColumn
+                        Header="Завершенность(%)" Binding="{Binding CompletingOfTheWork.Readiness}" Width="150">
+                    </DataGridTextColumn>
+
+
+                </DataGrid.Columns>
+
+            </DataGrid>
+
+
+
+
+
+        </Grid>
+    </Grid>
+</Page>

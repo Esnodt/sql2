@@ -1,0 +1,98 @@
+﻿<Page x:Class="authorization.Views.AdminPage.AddAdmin.AddPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:authorization.Views.AdminPage.AddAdmin"
+      mc:Ignorable="d" Loaded="Page_Loaded"
+      d:DesignHeight="600" d:DesignWidth="450"
+      Title="AddPage">
+
+
+
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="19*"/>
+        </Grid.ColumnDefinitions>
+        
+        
+        
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Button x:Name="ButtonGoBackEdit" Width="100" Height="30" Background="White" Foreground="Black" Content="Назад" Click="ButtonGoBackEdit_Click" Margin="10"></Button>
+        </StackPanel>
+        
+        
+        <StackPanel Grid.ColumnSpan="2">
+            <Label Content="Окно добавления строки" Margin="125 15 0 0" FontSize="20"></Label>
+        </StackPanel>
+
+        
+
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="35,126">
+            <StackPanel Orientation="Horizontal" >
+                
+                
+                
+                <TextBlock Text="Номер работника:" Margin="10" Width="180"></TextBlock>
+                <TextBox Background="White" BorderBrush="Black" Width="180" Height="25" x:Name="tb1"
+                         PreviewTextInput="tb1_PreviewTextInput">
+                </TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="ФИО Работника:" Margin="10"  Width="180"></TextBlock>
+                <TextBox Background="White" BorderBrush="Black" Width="180" Height="25" x:Name="tb2" PreviewTextInput="tb2_PreviewTextInput"></TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Должность:" Margin="10"  Width="180"></TextBlock>
+                <TextBox Background="White" BorderBrush="Black" Width="180" Height="25" x:Name="tb3" PreviewTextInput="tb3_PreviewTextInput"></TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Номер работы:" Margin="10"  Width="180"></TextBlock>
+                <TextBox Background="White" BorderBrush="Black" Width="180" Height="25" x:Name="tb4" PreviewTextInput="tb4_PreviewTextInput"></TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Название работы:" Margin="10"  Width="180"></TextBlock>
+                <TextBox Background="White" BorderBrush="Black" Width="180" Height="25" x:Name="tb5" PreviewTextInput="tb5_PreviewTextInput"></TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Трудоемкость:" Margin="10"  Width="180"></TextBlock>
+                <TextBox Background="White" BorderBrush="Black" Width="180" Height="25" x:Name="tb6" PreviewTextInput="tb6_PreviewTextInput"></TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Дата завершения:" Margin="10"  Width="180"></TextBlock>
+                <DatePicker Background="White" BorderBrush="Black" Width="180" Height="25" x:Name="tb7" ></DatePicker>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Планируемая дата завершения:" Margin="10"  Width="180"></TextBlock>
+                <DatePicker Background="White" BorderBrush="Black" Width="180" Height="25" x:Name="tb8" ></DatePicker>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Завершенность(%)" Margin="10"  Width="180"></TextBlock>
+                <TextBox Background="White" BorderBrush="Black" Width="180" Height="25" x:Name="tb9" PreviewTextInput="tb9_PreviewTextInput"></TextBox>
+            </StackPanel>
+
+
+
+
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="80,0">
+
+            <Button Width="100" Height="30" Background="White" BorderBrush="Black" Content="Добавить" Margin="10" x:Name="ButtonAdd" Click="ButtonAdd_Click" >
+            </Button>
+
+            <Button Width="150" Height="30" Background="White" BorderBrush="Black" Content="Очистить поля" Margin="10" Click="Button_Click">
+            </Button>
+        </StackPanel>
+    </Grid>
+</Page>
